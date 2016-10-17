@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sJi-Al-DJR">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Page-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="FIRMainPage" id="BYZ-38-t0r" customClass="FIRMainPage" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWR-uM-CB0">
+                                <state key="normal" title="Google Sign Out"/>
+                                <connections>
+                                    <action selector="SignOutBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="78w-yP-HCE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRl-FP-GNh">
+                                <state key="normal" title="Google Sign In"/>
+                                <connections>
+                                    <action selector="SignInBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="umZ-y7-6Yu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HWR-uM-CB0" firstAttribute="top" secondItem="KRl-FP-GNh" secondAttribute="bottom" constant="62" id="BpL-1V-zqs"/>
+                            <constraint firstItem="HWR-uM-CB0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KhS-or-frj"/>
+                            <constraint firstItem="KRl-FP-GNh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WnO-jG-ftQ"/>
+                            <constraint firstItem="KRl-FP-GNh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rPN-O5-h0A"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="x4U-td-Pyl"/>
+                    <connections>
+                        <outlet property="SignInBtn" destination="KRl-FP-GNh" id="f7J-v5-R61"/>
+                        <outlet property="SignOutBtn" destination="HWR-uM-CB0" id="fLW-rx-65W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1458" y="-1125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bMn-Mg-wxw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sJi-Al-DJR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Glz-pQ-T9X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="K5L-Pr-2MW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pba-xq-39h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="736.79999999999995" y="-1124.8875562218891"/>
+        </scene>
+    </scenes>
+</document>
